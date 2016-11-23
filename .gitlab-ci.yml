@@ -1,0 +1,8 @@
+deployment:
+  script:
+    - pushd /home/lunchbot
+    - git pull origin master
+    - npm install
+    - pm2 restart "Lunch Bot"
+    - popd
+  type: deploy
